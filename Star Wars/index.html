@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <audio src="./JS/Star_Wars_Main_Theme_Song.mp3" autoplay="autoplay" loop="loop" id="themesong"></audio> -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Wars</title>
+<script>let song = new Audio("http://soundfxcenter.com/movies/star-wars/8d82b5_Star_Wars_Main_Theme_Song.mp3");</script>
+<script src="./JS/index.js"></script>
+<link rel="stylesheet" href="./CSS/stars.css">
+<style>
+    body {
+        background-color: black;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #logo {
+        width: 500px;
+        height: fit-content;
+        margin: auto;
+        margin-top: 80px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #search {
+        margin: auto;
+        width: 500px;
+        margin-top: 30px;
+    }
+
+    #input {
+        width: 95%;
+        padding: 15px 0px;
+        padding-left: 20px;
+        background-color: black;
+        border: 1px solid grey;
+        border-radius: 30px;
+        font-size: 15px;
+        color: rgb(223, 219, 219);
+    }
+
+    #container {
+        width: 480px;
+        margin: auto;
+        margin-top: 10px;
+        height: fit-content;
+        max-height: 200px;
+        overflow-y: scroll;
+        color: white;
+        padding: 10px;
+        cursor: default;
+        text-align: center;
+    }
+
+    #container::-webkit-scrollbar {
+        width: 0.5vw;
+    }
+
+    #container::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 50px;
+    }
+
+    #container::-webkit-scrollbar-track {
+        background-color: black;
+    }
+</style>
+</head>
+
+<body style="background-color: black;">
+    <!-- https://star-wars-characters-search.netlify.app/ -->
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+        <div id="logo">
+            <img src="./CSS/star_wars.png" alt="star_wars">
+        </div>
+        <div id="search">
+            <input type="text" id="input" oninput="debouncefun(getData, 500)" placeholder="Enter Character Name....">
+        </div>
+        <div id="container">
+            <div id="bgcolor"></div>
+        </div>
+    </div>
+</body>
+
+</html>
